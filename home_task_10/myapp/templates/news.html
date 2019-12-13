@@ -20,7 +20,7 @@
 </head>
 
 <body>
-{% for i in sources %}
+
     <!-- Page Content -->
     <div class="container">
 
@@ -30,15 +30,15 @@
             <div class="col-md-8">
                 <!-- Blog Post -->
                 <div class="card mb-4">
-                    <img class="card-img-top" src="http://placehold.it/750x300" alt="Card image cap">
+                    <img class="card-img-top" src="{{image}}" alt="Card image cap">
                     <div class="card-body">
-                        <h2 class="card-title">{{i.title}}</h2>
-                        <p class="card-text">{{article.description}}</p>
+                        <h2 class="card-title">{{title| upper}}</h2>
+                        <p class="card-text">{{content}}</p>
 
                     </div>
                     <div class="card-footer text-muted">
-                        Posted on January 1, 2017 by
-                        <a href="#">Author name</a>
+                        {{published}} by
+                        <a href="#">{{author}}</a>
                         <div class='news-buttons'>
                             <button type="button" class="btn btn-outline-success">Edit</button>
                             <button type="button" class="btn btn-outline-danger">Delete</button>
